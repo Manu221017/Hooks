@@ -1,6 +1,10 @@
 import React from "react";
 
-const ButtonNormal = React.memo(({ onClick }) => {
+interface ButtonProps {
+  onClick: () => void;
+}
+
+const ButtonNormal = React.memo(({ onClick }: ButtonProps) => {
   console.log("🔁 Renderizado: ButtonNormal");
 
   return (

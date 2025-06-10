@@ -1,6 +1,10 @@
 import React from "react";
 
-const ButtonOptimizado = React.memo(({ onClick }) => {
+interface ButtonProps {
+  onClick: () => void;
+}
+
+const ButtonOptimizado = React.memo(({ onClick }: ButtonProps) => {
   console.log("🔁 Renderizado: ButtonOptimizado");
 
   return (

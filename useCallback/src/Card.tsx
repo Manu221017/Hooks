@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
-import ButtonOptimizado from "./ButtonOptimizado";
-import ButtonNormal from "./ButtonNormal";
+import { useState, useCallback } from "react";
+import ButtonOptimizado from "./ButtonOptimizado.tsx";
+import ButtonNormal from "./ButtonNormal.tsx";
 
 const Card = () => {
   const [randomNumber, setRandomNumber] = useState(0);
