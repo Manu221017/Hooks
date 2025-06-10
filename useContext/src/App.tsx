@@ -1,4 +1,3 @@
-import React from "react";
 import { ThemeProvider } from "./ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import ThemeDisplay from "./ThemeDisplay";

@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 
-const ThemeDisplay = () => {
-  const { theme } = useContext(ThemeContext);
+const ThemeDisplay: React.FC = () => {
+  const context = useContext(ThemeContext);
+  
+  if (!context) {
+    throw new Error("ThemeDisplay must be used within a ThemeProvider");
+  }
+  
+  const { theme } = context;
   console.log("🔁 Render: ThemeDisplay");
 
   const styles = {
@@ -22,5 +28,4 @@ const ThemeDisplay = () => {
   );
 };
 
-export default ThemeDisplay;
-
+export default ThemeDisplay; 

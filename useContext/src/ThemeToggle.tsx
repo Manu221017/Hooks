@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 
-const ThemeToggle = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+const ThemeToggle: React.FC = () => {
+  const context = useContext(ThemeContext);
+  
+  if (!context) {
+    throw new Error("ThemeToggle must be used within a ThemeProvider");
+  }
+  
+  const { toggleTheme } = context;
   console.log("🔁 Render: ThemeToggle");
 
   return (
@@ -22,4 +28,4 @@ const ThemeToggle = () => {
   );
 };
 
-export default ThemeToggle;
+export default ThemeToggle; 
